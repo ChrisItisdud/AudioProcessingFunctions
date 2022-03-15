@@ -1,4 +1,4 @@
-# AudioProcessorAlgos
+# AudioProcessingFunctions
 
 This repository contains several utility algorithms for audio processing, meant to be used with the [VST3 SDK by  Steinberg](https://github.com/steinbergmedia/vst3sdk). You might need to change them up a little to use them with JUCE or other frameworks.
 
