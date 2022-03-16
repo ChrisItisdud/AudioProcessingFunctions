@@ -34,5 +34,14 @@ public:
     <param name='s'>side input</param>
     */
     static void MStoLR(double m, double s, double &l, double &r);
+
+    template <typename T>
+    /*
+    <summary>slew limiter for numeric types</summary>
+    <param name='target'>the target value for the parameter</param>
+    <param name='value'>reference to the parameter to adjust</param>
+    <param name='threshold'>threshold for slew limiting/maximum movement between samples</param>
+    */
+    static T slew (T target, T &value, T threshold);
 };
 }

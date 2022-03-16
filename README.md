@@ -9,4 +9,4 @@ zcdMuteAlgo contains a zero-crossing-detecting mute algorithm. By waiting with m
 
 - simpleUtilities
 
-simpleUtilities will contain very simple utilities useful for basically every plug-in. Currently only contains conversion from mid/side to left/right and vice versa. Detailed documentation can be found in simpleUtilities.md.
+simpleUtilities will contain very simple utilities useful for basically every plug-in. Currently contains conversion from mid/side to left/right and vice versa as well as a slew limiter. Detailed documentation can be found in simpleUtilities.md.

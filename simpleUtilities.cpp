@@ -17,4 +17,23 @@ namespace AudioProcessingAlgorithms {
         l = m+s;
         r = m-s;
     }
+    template <typename T>
+    T myAbs(T value){
+        if(value<0)return value*-1;
+        else return value;
+    }
+    template <typename T>
+    T SimpleUtilities::slew(T target, T &value, T threshold){
+        if(myAbs(value-target)<=threshold){
+            value = target;
+            return value;
+        }
+        else {
+            if(value<target)
+                value+=threshold;
+            else
+                value-=threshold;
+            return value;
+        }
+    }
 }
