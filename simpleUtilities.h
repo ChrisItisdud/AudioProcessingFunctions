@@ -9,7 +9,7 @@ public:
     <param name='m'>mid output will be stored here</param>
     <param name='s'>side output will be stored here</param>
     */
-    static void LRtoMS(float l, float r, float &m, float &s);
+    static void LRtoMS(float l, float r, float *m, float *s);
     /*
     <summary>converts left/right to mid/side channels</summary>
     <param name='l'>left input</param>
@@ -17,7 +17,7 @@ public:
     <param name='m'>mid output will be stored here</param>
     <param name='s'>side output will be stored here</param>
     */
-    static void LRtoMS(double l, double r, double &m, double &s);
+    static void LRtoMS(double l, double r, double *m, double *s);
     /*
     <summary>converts mid/side to left/right channels</summary>
     <param name='l'>left output will be stored here</param>
@@ -25,7 +25,7 @@ public:
     <param name='m'>mid input</param>
     <param name='s'>side input</param>
     */
-    static void MStoLR(float m, float s, float &l, float &r);
+    static void MStoLR(float m, float s, float *l, float *r);
     /*
     <summary>converts mid/side to left/right channels</summary>
     <param name='l'>left output will be stored here</param>
@@ -33,7 +33,7 @@ public:
     <param name='m'>mid input</param>
     <param name='s'>side input</param>
     */
-    static void MStoLR(double m, double s, double &l, double &r);
+    static void MStoLR(double m, double s, double *l, double *r);
 
     template <typename T>
     /*
@@ -42,6 +42,6 @@ public:
     <param name='value'>reference to the parameter to adjust</param>
     <param name='threshold'>threshold for slew limiting/maximum movement between samples</param>
     */
-    static T slew (T target, T &value, T threshold);
+    static T slew (T target, T *value, T threshold);
 };
 }
